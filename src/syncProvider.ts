@@ -190,7 +190,10 @@ export class FTPSyncProvider implements ISyncProvider {
 
         // delete old folders
         for (const file of diffs.delete.filter(item => item.type === "folder")) {
-            await this.removeFolder(file.name);
+            try {
+                await this.removeFolder(file.name);
+            } catch (e) {
+            }
         }
 
         this.logger.all(`----------------------------------------------------------------`);
