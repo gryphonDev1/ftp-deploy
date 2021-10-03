@@ -134,7 +134,7 @@ export class FTPSyncProvider implements ISyncProvider {
         else {
             this.logger.verbose(`  removing folder "${path.folders.join("/") + "/"}"`);
             if (this.dryRun === false) {
-                await retryRequest(this.logger, async () => await this.client.removeDir(path.folders!.join("/") + "/"));
+                await retryRequest(this.logger, async () => try { await this.client.removeDir(path.folders!.join("/") + "/") } catch (e) { });
             }
         }
 
