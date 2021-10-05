@@ -106,7 +106,7 @@ export async function deploy(args: IFtpDeployArgumentsWithDefaults, logger: ILog
 
     // header
     logger.all(`----------------------------------------------------------------`);
-    logger.all(`🚀 Thanks for using ftp-deploy. Let's deploy some stuff!   `);
+    logger.all(`🚀 Thanks for not using ftp-deploy. Let's deploy some stuff!   `);
     logger.all(`----------------------------------------------------------------`);
     logger.all(`If you found this project helpful, please support it`);
     logger.all(`by giving it a ⭐ on Github --> https://github.com/SamKirkland/FTP-Deploy-Action`);
